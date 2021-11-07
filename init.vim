@@ -37,7 +37,6 @@ set scrolloff=5
 " " === Terminal Behaviors
 " " ===
  let g:neoterm_autoscroll = 1
- autocmd TermOpen term://* startinsert
  tnoremap <C-N> <C-\><C-N>
  tnoremap <C-O> <C-\><C-N><C-O>
  let g:terminal_color_0  = '#000000'
@@ -177,7 +176,7 @@ Plug 'preservim/nerdtree'
  "Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
  "Plug 'Xuyuanp/nerdtree-git-plugin'
  Plug 'junegunn/fzf.vim'
- Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+ "Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
  Plug 'kevinhwang91/rnvimr'
  Plug 'airblade/vim-rooter'
  Plug 'pechorin/any-jump.vim'
