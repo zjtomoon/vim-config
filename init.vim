@@ -212,30 +212,11 @@ Plug 'preservim/nerdtree'
   Plug 'google/vim-maktaba'
   Plug 'google/vim-codefmt'
 
-  " Tex
-  " Plug 'lervag/vimtex'
 
-  " CSharp
-  Plug 'OmniSharp/omnisharp-vim'
-  Plug 'ctrlpvim/ctrlp.vim' , { 'for': ['cs', 'vim-plug'] } " omnisharp-vim dependency
 
   " HTML, CSS, JavaScript, Typescript, PHP, JSON, etc.
   Plug 'elzr/vim-json'
   Plug 'neoclide/jsonc.vim'
-  Plug 'othree/html5.vim'
-  Plug 'alvan/vim-closetag'
-  " Plug 'hail2u/vim-css3-syntax' " , { 'for': ['vim-plug', 'php', 'html','javascript', 'css', 'less'] }
-  " Plug 'spf13/PIV', { 'for' :['php', 'vim-plug'] }
-  " Plug 'pangloss/vim-javascript', { 'for': ['vim-plug', 'php', 'html','javascript', 'css', 'less'] }
-  Plug 'yuezk/vim-js', { 'for': ['vim-plug', 'php', 'html', 'javascript','css', 'less'] }
-  " Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['vim-plug', 'php', 'html','javascript', 'css', 'less'] }
-  " Plug 'jelera/vim-javascript-syntax', { 'for': ['vim-plug', 'php', 'html','javascript', 'css', 'less'] }
-  "Plug 'jaxbot/browserlink.vim'
-  Plug 'HerringtonDarkholme/yats.vim'
-  " Plug 'posva/vim-vue'
-  " Plug 'evanleck/vim-svelte', {'branch': 'main'}
-  " Plug 'leafOfTree/vim-svelte-plugin'
-  " Plug 'leafgarland/typescript-vim'
 
   " Go
   Plug 'fatih/vim-go' , { 'for': ['go', 'vim-plug'], 'tag': '*' }
@@ -248,15 +229,7 @@ Plug 'preservim/nerdtree'
   "Plug 'plytophogy/vim-virtualenv', { 'for' :['python', 'vim-plug'] }
   Plug 'tweekmonster/braceless.vim', { 'for' :['python', 'vim-plug'] }
 
-  " Flutter
-  Plug 'dart-lang/dart-vim-plugin'
-  Plug 'f-person/pubspec-assist-nvim', { 'for' : ['pubspec.yaml'] }
-
-  " Swift
-  Plug 'keith/swift.vim'
-  Plug 'arzg/vim-swift'
-
-  " Markdown
+      " Markdown
   Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
   Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for':['text', 'markdown', 'vim-plug'] }
   Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
@@ -334,45 +307,7 @@ call plug#end()
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 color desert
 "vim-plug plugins config
-"=========================================================================================================================================
-"omnisharp-vim
-" Use the stdio version of OmniSharp-roslyn - this is the default
-let g:OmniSharp_server_stdio = 1
 "
-" " Use the HTTP version of OmniSharp-roslyn:
-" let g:OmniSharp_server_stdio = 0"
-
-let g:ale_linters = { 'cs': ['OmniSharp']  }
-augroup omnisharp_commands
-autocmd!
-autocmd FileType cs nmap <silent> <buffer> gd <Plug>(omnisharp_go_to_definition)
-autocmd FileType cs nmap <silent> <buffer> <Leader>osfu <Plug>(omnisharp_find_usages)
-autocmd FileType cs nmap <silent> <buffer> <Leader>osfi <Plug>(omnisharp_find_implementations)
-autocmd FileType cs nmap <silent> <buffer> <Leader>ospd <Plug>(omnisharp_preview_definition)
-autocmd FileType cs nmap <silent> <buffer> <Leader>ospi <Plug>(omnisharp_preview_implementations)
-autocmd FileType cs nmap <silent> <buffer> <Leader>ost <Plug>(omnisharp_type_lookup)
-autocmd FileType cs nmap <silent> <buffer> <Leader>osd <Plug>(omnisharp_documentation)
-autocmd FileType cs nmap <silent> <buffer> <Leader>osfs <Plug>(omnisharp_find_symbol)
-autocmd FileType cs nmap <silent> <buffer> <Leader>osfx <Plug>(omnisharp_fix_usings)
-autocmd FileType cs nmap <silent> <buffer> <C-\> <Plug>(omnisharp_signature_help)
-autocmd FileType cs imap <silent> <buffer> <C-\> <Plug>(omnisharp_signature_help)
-
-autocmd FileType cs nmap <silent> <buffer> [[ <Plug>(omnisharp_navigate_up)
-autocmd FileType cs nmap <silent> <buffer> ]] <Plug>(omnisharp_navigate_down)
-autocmd FileType cs nmap <silent> <buffer> <Leader>osgcc <Plug>(omnisharp_global_code_check)
-autocmd FileType cs nmap <silent> <buffer> <Leader>osca <Plug>(omnisharp_code_actions)
-autocmd FileType cs xmap <silent> <buffer> <Leader>osca <Plug>(omnisharp_code_actions)
-autocmd FileType cs nmap <silent> <buffer> <Leader>os. <Plug>(omnisharp_code_action_repeat)
-autocmd FileType cs xmap <silent> <buffer> <Leader>os. <Plug>(omnisharp_code_action_repeat)
-
-autocmd FileType cs nmap <silent> <buffer> <Leader>os= <Plug>(omnisharp_code_format)
-
-autocmd FileType cs nmap <silent> <buffer> <Leader>osnm <Plug>(omnisharp_rename)
-
-autocmd FileType cs nmap <silent> <buffer> <Leader>osre <Plug>(omnisharp_restart_server)
-autocmd FileType cs nmap <silent> <buffer> <Leader>osst <Plug>(omnisharp_start_server)
-autocmd FileType cs nmap <silent> <buffer> <Leader>ossp <Plug>(omnisharp_stop_server)
-augroup END
 "vim-go
 let g:go_echo_go_info = 0
 let g:go_doc_popup_window = 1
@@ -444,22 +379,13 @@ let g:coc_global_extensions = [
 	\'coc-snippets',
 	\'coc-prettier',
 	\'coc-vimlsp',
-	\'coc-omnisharp',
 	\'coc-go',
 	\'coc-rust-analyzer',
-	\'coc-rls',
 	\'coc-cmake',
 	\'coc-clangd',
 	\'coc-sql',
 	\'coc-sh',
 	\'coc-json',
-	\'coc-tsserver',
-	\'coc-react-refactor',
-	\'coc-html',
-	\'coc-css',
-	\'coc-eslint',
-	\'coc-tslint-plugin',
-	\'coc-styled-components',
 	\'coc-explorer']
 
 "coc-settings
