@@ -109,14 +109,6 @@ function CompileRun()
 			set splitbelow
 			:sp
 			:term cargo run .
-		elseif &filetype == 'cs'
-			set splitbelow
-			:sp
-			:term dotnet run 
-		elseif &filetype == 'typescript'
-			set splitbelow
-			:sp
-			:term ts-node %
 		endif
 endfunction
 
@@ -127,7 +119,6 @@ call plug#begin('~/.vim/plugged')
 
 "language_support
 Plug 'rust-lang/rust.vim'
-Plug 'Omnisharp/omnisharp-vim'
 Plug 'dense-analysis/ale'
 Plug 'fatih/vim-go',{'do': ':GoUpdateBinaries'}
 
@@ -184,8 +175,6 @@ Plug 'preservim/nerdtree'
  " Taglist
  Plug 'liuchengxu/vista.vim'
 
- " Debugger
- " Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-c --enable-python --enable-go'}
 
   " Auto Complete
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -219,14 +208,6 @@ Plug 'preservim/nerdtree'
 
   " Go
   Plug 'fatih/vim-go' , { 'for': ['go', 'vim-plug'], 'tag': '*' }
-
-  " Python
-  " Plug 'tmhedberg/SimpylFold', { 'for' :['python', 'vim-plug'] }
-  Plug 'Vimjas/vim-python-pep8-indent', { 'for' :['python', 'vim-plug'] }
-  Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for' :['python',  'vim-plug'] }
-  "Plug 'vim-scripts/indentpython.vim', { 'for' :['python', 'vim-plug'] }
-  "Plug 'plytophogy/vim-virtualenv', { 'for' :['python', 'vim-plug'] }
-  Plug 'tweekmonster/braceless.vim', { 'for' :['python', 'vim-plug'] }
 
       " Markdown
   Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
