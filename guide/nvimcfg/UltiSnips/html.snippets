@@ -1,0 +1,28 @@
+snippet html:5 "Basic html content" bwA
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  $0
+</body>
+</html>
+endsnippet
+
+snippet "meta|a|ul|ol|li|head|title|h[1-6]|div|p|span|header|footer|link|script+" "html tags" riw
+<`!p snip.rv=match.group(0)`${1}>${2:${VISUAL}}</`!p snip.rv=match.group(0)`>$0
+endsnippet
+
+snippet "(meta|a|ul|ol|li|head|title|h[1-6]|div|p|span|header|footer|link|script) " "multiline html tags" riw
+<`!p snip.rv=match.group(1)`${1}>
+  ${2:${VISUAL}}
+</`!p snip.rv=match.group(1)`>$0
+endsnippet
+
+snippet "ht(ag)\?" "description" w
+<${1}>${2}<$1>$0
+endsnippet
+
