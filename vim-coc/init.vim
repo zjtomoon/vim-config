@@ -117,6 +117,10 @@ function CompileRun()
 			set splitbelow
 			:sp
 			:term lua %
+		elseif &filetype == 'python'
+			set splitbelow
+			:sp
+			:term python3 %
 		endif
 endfunction
 
@@ -170,8 +174,9 @@ Plug 'preservim/nerdtree'
 
 
   " Auto Complete
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  " Plug 'neoclide/coc.nvim', {'branch': 'release', 'tag': 'v0.0.79'}
+  "Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+  "Plug 'neoclide/coc.nvim', {'branch': 'release', 'tag': 'v0.0.79'}
   Plug 'wellle/tmux-complete.vim'
 
   " Snippets
@@ -187,9 +192,6 @@ Plug 'preservim/nerdtree'
   " HTML, CSS, JavaScript, Typescript, PHP, JSON, etc.
   Plug 'elzr/vim-json'
   Plug 'neoclide/jsonc.vim'
-
-  " Go
-  Plug 'fatih/vim-go' , { 'for': ['go', 'vim-plug'], 'tag': '*' }
 
       " Markdown
   Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
@@ -217,7 +219,6 @@ Plug 'preservim/nerdtree'
   "Plug 'wellle/context.vim'
   Plug 'svermeulen/vim-subversive'
   Plug 'rhysd/clever-f.vim'
-  Plug 'AndrewRadev/splitjoin.vim'
   " Plug 'jeffkreeftmeijer/vim-numbertoggle'
   Plug 'Yggdroot/indentLine'
 
@@ -299,14 +300,14 @@ let g:coc_global_extensions = [
 	\'coc-prettier',
 	\'coc-vimlsp',
 	\'coc-go',
-	\'coc-rust-analyzer',
+	\'coc-rls',
 	\'coc-cmake',
 	\'coc-clangd',
 	\'coc-sql',
 	\'coc-sh',
 	\'coc-json',
 	\'coc-sumneko-lua',
-	\'coc-rome',
+	\'coc-tsserver',
 	\'coc-pyright',
 	\'coc-explorer']
 

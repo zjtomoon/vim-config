@@ -2,7 +2,7 @@
 
 > 该版本配置适合于centos7等版本较老的linux发行版
 > 
-> vim version > 8.0或neovim version >0.4
+> vim version > 8.0或neovim version >0.4(推荐使用neovim,因为相同插件下vim可能有点bug)
 > 
 > node >= 12.22
 

@@ -1165,7 +1165,7 @@ function! s:update_impl(pull, force, args) abort
     let $GIT_TERMINAL_PROMPT = 0
     for plug in values(todo)
       let plug.uri = substitute(plug.uri,
-            \ '^https://git::@hub.fastgit\.org', 'https://hub.fastgit.org', '')
+            \ '^https://git::@github.com.cnpmjs\.org', 'https://github.com.cnpmjs.org', '')
     endfor
   endif
 

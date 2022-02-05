@@ -1,6 +1,6 @@
 mkdir -p ~/.vim/autoload
-cp ./plug.vim ~/.vim/autoload/
-cp init.vim ~/.vim/
+cp ../plug.vim ~/.vim/autoload/
+cp ../init.vim ~/.vim/
 
 echo "source ~/.vim/init.vim" >> ~/.vimrc
 
