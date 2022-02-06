@@ -4,6 +4,7 @@ cp ../plug.vim ~/.local/share/nvim/site/autoload/plug.vim
 mkdir -p ~/.config/nvim
 
 cp ../init.vim ~/.config/nvim/init.vim
+cp ../coc-settings.json ~/.config/nvim/coc-settings.json
 
 #安装nodejs以安装coc插件
 mkdir -p ~/download

@@ -300,7 +300,7 @@ let g:coc_global_extensions = [
 	\'coc-prettier',
 	\'coc-vimlsp',
 	\'coc-go',
-	\'coc-rls',
+	\'coc-rust-analyzer',
 	\'coc-cmake',
 	\'coc-clangd',
 	\'coc-sql',

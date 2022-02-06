@@ -18,6 +18,8 @@
 
 + 5、再次打开vim 安装coc插件
 
+# rust lsp设置
++ 执行 ./rust-analyzer-init/init.sh脚本
 # 其他
 
 neovim 0.6以上版本自带lsp语言支持，有兴趣可以尝试

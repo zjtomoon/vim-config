@@ -1,0 +1,5 @@
+{
+	"rust-analyzer.enable": true,
+	"rust-analyzer.updates.channel": "nightly",
+	"rust-analyzer.server.path":"/home/alex/software/rust-analyzer-x86_64-unknown-linux-gnu" ,
+}
