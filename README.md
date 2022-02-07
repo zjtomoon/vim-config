@@ -28,3 +28,13 @@ wget https://github.com/zjtomoon/vim-config/releases/download/v1.0.0/linux-x64.z
 unzip linux-x64.zip
 mv linux-x64 ~/software
 ```
+
++ 安装教程
+  
+  > 执行`./FastGithub`
+  > 
+  > 手工添加127.0.0.1做为/etc/resolv.conf的第一条记录
+  > 
+  > 手工安装CACert/FastGithub.cer到受信任的根证书颁发机构
+
+
