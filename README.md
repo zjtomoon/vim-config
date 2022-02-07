@@ -25,6 +25,6 @@
 mkdir download # ~/download
 cd ~/download
 wget https://github.com/zjtomoon/vim-config/releases/download/v1.0.0/linux-x64.zip
+unzip linux-x64.zip
+mv linux-x64 ~/software
 ```
-
-
