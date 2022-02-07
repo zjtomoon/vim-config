@@ -24,7 +24,12 @@
 ```bash
 mkdir download # ~/download
 cd ~/download
+#linux
 wget https://github.com/zjtomoon/vim-config/releases/download/v1.0.0/linux-x64.zip
+#macos
+wget https://github.com/zjtomoon/vim-config/releases/download/v1.0.0/osx-x64.zip
+#windows
+wget https://github.com/zjtomoon/vim-config/releases/download/v1.0.0/win10-x64.zip
 unzip linux-x64.zip
 mv linux-x64 ~/software
 ```
@@ -37,4 +42,60 @@ mv linux-x64 ~/software
   > 
   > 手工安装CACert/FastGithub.cer到受信任的根证书颁发机构
 
++ 安装CA证书
 
+```bash
+cd CACert/
+# ubuntu
+sudo cp FastGithub.cer /usr/local/share/ca-certificates/
+sudo update-ca-certificates
+
+# centos
+sudo cp FastGithub.cer /etc/pki/ca-trust/source/anchors/
+sudo update-ca-trust
+#如果没有该命令
+yum install ca-certificates
+update-ca-trust force-enable
+```
+
++ ssh占用22端口的问题
+
+```bash
+sudo vim /etc/ssh/sshd_config
+#port 22 
+port 2222
+```
+
++ udp 53端口占用的问题
+
+```bash
+sudo vim /etc/services
+# 删除53端口并重启服务
+sudo systemctl restart network-manager.service
+#查看53端口进程
+sudo lsof -i:53
+# 关键步骤
+ sudo systemctl disable systemd-resolved.service
+ sudo systemctl stop systemd-resolved.service
+```
+
++ 遇到SSL certificate problem
+
+```bash
+git config --global http.sslverify false
+```
+
++ 启动
+
+```bash
+sudo ./FastGithub start
+```
+
++ Couldn’t find a valid ICU package installed on the system错误
+
+```bash
+# centos
+sudo yum install libicu libicu-devel libunwind
+#ubuntu
+sudo apt-get install libicu-dev
+```
