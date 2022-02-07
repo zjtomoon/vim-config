@@ -64,7 +64,12 @@ update-ca-trust force-enable
 sudo vim /etc/ssh/sshd_config
 #port 22 
 port 2222
+
+#或者使用semanage
+semanage port -a -t ssh_port_t -p tcp
 ```
+
+> 关于fedora-server32更改ssh默认端口[fedora修改默认端口](./docs/fedroa修改默认端口.md)
 
 + udp 53端口占用的问题
 
@@ -98,4 +103,16 @@ sudo ./FastGithub start
 sudo yum install libicu libicu-devel libunwind
 #ubuntu
 sudo apt-get install libicu-dev
+```
+
++ 修改/etc/resolv.conf
+
+```bash
+# 直接修改/etc/resolv.conf会在下一次重启后重置
+# 修改网卡配置
+sudo vim /etc/sysconfig/network-scripts/
+#添加
+DNS1=127.0.0.1
+DSN2=218.2.2.2
+DNS3=218.4.4.4
 ```
