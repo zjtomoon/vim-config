@@ -80,7 +80,7 @@ return require('packer').startup(
     use 'powerline/powerline'
     use 'luochen1990/rainbow'
     --vim-go
-    use 'fatih/vim-go'
+    --use 'fatih/vim-go'
 
 
     end,
@@ -89,7 +89,7 @@ return require('packer').startup(
       git = {
         --修改这里可以切换加速的节点
         --default_url_format = "https://github.com.cnpmjs.org/%s"
-        default_url_format = "https://gitcode.net/mirrors/%s"
+        --default_url_format = "https://gitcode.net/mirrors/%s"
       },
       display = {
         open_fn = function()

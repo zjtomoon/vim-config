@@ -82,11 +82,15 @@ function CompileRun()
     elseif &filetype == 'typescript'
       set splitbelow
       :sp 
-      :term ts-node .
+      :term ts-node %
     elseif &filetype == 'lua'
       set splitbelow
       :sp 
-      :term lua .
+      :term lua %
+    elseif &filetype == 'python'
+      set splitbelow
+      :sp
+      :term python %
 		endif
 endfunction
 
