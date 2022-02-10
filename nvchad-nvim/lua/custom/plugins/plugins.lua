@@ -9,9 +9,32 @@ return {
      "williamboman/nvim-lsp-installer",
    },
 
-   {
-     "fatih/vim-go"
-   }, 
+  --  {
+  --    "fatih/vim-go"
+  --  }, 
+
+  -- go-tools
+  {
+    "ray-x/go.nvim",
+    opt = true,
+    config = function ()
+      require("go").setup()
+    end,
+    setup = function ()
+      require("core.utils").packer_lazy_load "go.nvim"
+    end
+  },
+  --rust-tools
+  {
+    "simrat39/rust-tools.nvim",
+    opt = true,
+    config = function ()
+      require('rust-tools').setup()
+    end,
+    setup = function ()
+      require("core.utils").packer_lazy_load "rust-tools.nvim"
+    end
+  },
 
    -- 自动打开上次浏览位置
   {
